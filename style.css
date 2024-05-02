@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Norse Bold";
+    src: url("fonts/norse-bold-webfont.woff2") format("woff2") ;
+}
+
+:root {
+    --primary-display: flex;
+    --logo-font-size: 4rem;
+   
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100dvh;
+    display: var(--primary-display);
+}
+
+
+
+.left {
+    position: relative;
+    width: 30%;
+}
+
+.photo {
+    background-image: url("images/photo.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: var(--primary-display);
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    padding: 20px;
+    
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo-name {
+    color: antiquewhite;
+    font-size: var(--logo-font-size);
+    font-family: "Norse Bold";
+}
+
+#logo-mascot {
+    aspect-ratio: 1;
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,8 @@
-@import url(fonts/fonts.css);
+@import url('fonts/fonts.css');
 
 :root {
     --primary-display: flex;
+    --primary-font: 'Roboto Bold', system-ui, sans-serif;
     --logo-font-size: 4rem;
 }
 
@@ -17,6 +18,13 @@ body {
     display: var(--primary-display);
 }
 
+a, #photo-credit {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 
 .left {
@@ -59,6 +67,16 @@ body {
     width: 80px;
 }
 
+#photo-credit {
+    text-align: center;
+    width: 100%;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
 
 
 .right {
@@ -68,18 +86,17 @@ body {
     flex-grow: 1;
     flex-direction: column;
 
-    gap: 50px;
+    gap: 80px;
 }
 
-.right > p {
-    width: 60%;
-    font-size: 1rem;
-    font-family: 'Roboto Bold', system-ui, sans-serif;
+#dummy-text {
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
 }
 
 .form-container {
     padding: 30px 0px;
-    box-shadow: 1px 11px 24px -1px rgba(0,0,0,0.92);
+    box-shadow: 0px 1px 6.5px 1px rgba(0,0,0,0.92)
 }
 
 .form {
@@ -112,6 +129,12 @@ input:focus:valid {
     outline: 0;
 }
 
+.bottom {
+    display: var(--primary-display);
+    flex-direction: column;
+    gap: 20px;
+}
+
 #create-btn {
     color: antiquewhite;
     font-size: 1.2rem;
@@ -126,6 +149,11 @@ input:focus:valid {
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.92);
 }
 
+#login {
+    font-family: var(--primary-font);
+    color: #596D48;
+}
+
 
 
 .row-2, .row-3 {
@@ -134,9 +162,9 @@ input:focus:valid {
 
 input, label, button {
     cursor: pointer;
-    font-family: 'Roboto Bold', system-ui, sans-serif;
+    font-family: var(--primary-font);
 }
 
-.form, p, #create-btn {
+span, .form, #dummy-text, #create-btn {
     margin-left: 40px;
 }

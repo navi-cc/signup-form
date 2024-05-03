@@ -1,12 +1,8 @@
-@font-face {
-    font-family: "Norse Bold";
-    src: url("fonts/norse-bold-webfont.woff2") format("woff2") ;
-}
+@import url(fonts/fonts.css);
 
 :root {
     --primary-display: flex;
     --logo-font-size: 4rem;
-   
 }
 
 
@@ -25,7 +21,7 @@ body {
 
 .left {
     position: relative;
-    width: 30%;
+    width: 40%;
 }
 
 .photo {
@@ -55,7 +51,7 @@ body {
 #logo-name {
     color: antiquewhite;
     font-size: var(--logo-font-size);
-    font-family: "Norse Bold";
+    font-family: 'Norse Bold', system-ui, sans-serif;
 }
 
 #logo-mascot {
@@ -65,10 +61,82 @@ body {
 
 
 
+.right {
+    display: var(--primary-display);
+    justify-content: center;
+
+    flex-grow: 1;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.right > p {
+    width: 60%;
+    font-size: 1rem;
+    font-family: 'Roboto Bold', system-ui, sans-serif;
+}
+
+.form-container {
+    padding: 30px 0px;
+    box-shadow: 1px 11px 24px -1px rgba(0,0,0,0.92);
+}
+
+.form {
+    display: var(--primary-display);
+}
+
+.form > div {
+    display: var(--primary-display);
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+input {
+    border: solid 2px rgba(0, 0, 0, 0.562);
+    border-radius: 5px;
+    padding: 5px;
+
+    font-size: 1.5rem;
+}
+
+input:focus:invalid {
+    border-color: red;
+}
+
+input:focus:valid {
+    border-color: green;
+}
+
+:focus {
+    outline: 0;
+}
+
+#create-btn {
+    color: antiquewhite;
+    font-size: 1.2rem;
+    
+    padding: 15px 10px;
+    width: 200px;
+
+    background-color: #596D48;
+    border-radius: 10px;
+    border: none;
+
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.92);
+}
 
 
 
+.row-2, .row-3 {
+    margin-top: 25px;
+}
 
+input, label, button {
+    cursor: pointer;
+    font-family: 'Roboto Bold', system-ui, sans-serif;
+}
 
-
-
+.form, p, #create-btn {
+    margin-left: 40px;
+}
